@@ -4,6 +4,9 @@
 
 std::string	transformCase( const std::string &str, const std::string &type );
 
+/*
+ *
+ */
 int	main(int argc, char **argv)
 {
 	if (argc == 1) {
@@ -17,12 +20,16 @@ int	main(int argc, char **argv)
 	return 1;
 }
 
+
 /*
-	reserve(): asigna el espacio en el bufer interno de la cadena para no
-			   realojarla repetidamente. No utiliza memoria dinamica.
-	locale: crear contexto de localizacion regional para el manejo de 
-			caracteres especiales.
-*/
+ * Transforms a string to uppercase or lowercase depending on the value of type,
+ * passed as a parameter. If the type is wrong, it returns the original string.
+ * Parameters:
+ *     str: the string to transform
+ *     type: the type of transformation
+ * Return:
+ *     dst: the string tranformed
+ */
 std::string transformCase(const std::string &str, const std::string &type) {
 	std::string dst;
 	std::size_t len = str.length();
