@@ -36,7 +36,7 @@ class Phonebook {
 		std::string	getContactNickname( int i ) const;
 		std::string	getContactPhoneNumber( int i ) const;
 		std::string	getContactSecret( int i ) const;
-		std::string truncString( const std::string &str ) const;
+		std::string	truncString( const std::string &str ) const;
 		void		addContact( const std::string &fName, const std::string &lName,
 								const std::string &nName, const std::string &phone,
 								const std::string &secret );
