@@ -1,8 +1,8 @@
-NAME = megaphone
+NAME = hithisisbrain
 
-SRCS = megaphone.cpp
+SRCS = main.cpp\
 
-OBJS = megaphone.o
+OBJS = main.o\
 
 CC = clang++
 
