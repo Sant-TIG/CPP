@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 14:52:05 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/30 14:52:07 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp"
-#include <iostream>
-#include <iomanip>
 #include <cctype>
 #include <sstream>
 #include <cstdlib>
@@ -14,9 +24,10 @@ void		searchContact( Phonebook &onePhonebook );
 int			getInputInt( const std::string &query );
 
 /*
- * Main function of the program. Create a new Phonebook object, then display the menu and process
- * the user's activity in a loop until the user decides to exit the program. After each user interaction
- * it clears the screen and redisplays the menu.
+ * Main function of the program. Create a new Phonebook object, then display the
+ * menu and process the user's activity in a loop until the user decides to exit
+ * the program. After each user interaction it clears the screen and redisplays
+ * the menu.
  * Return:
  *     0: when the program ends.
  */

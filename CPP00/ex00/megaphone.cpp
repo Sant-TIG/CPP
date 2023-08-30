@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 14:39:08 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/30 14:41:48 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -5,7 +17,8 @@
 std::string	transformCase( const std::string &str, const std::string &type );
 
 /*
- *
+ * Main function of the program. Checks that the arguments received by the program
+ * are correct and, if it is possible, converts them to uppercase.
  */
 int	main(int argc, char **argv)
 {

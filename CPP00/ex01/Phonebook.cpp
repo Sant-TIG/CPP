@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 14:53:34 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/30 14:53:36 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp"
 #include "Contact.hpp"
-#include <iostream>
-#include <iomanip>
 
 int	Phonebook::nbrContacts = 0;
 int	Phonebook::currContact = 0;
@@ -45,27 +55,31 @@ Phonebook::~Phonebook( void ) {
 /*
  * Getter methods
  */
-int	Phonebook::getNbrContacts( void ) {
+int	Phonebook::getNbrContacts( void ) const {
 	return nbrContacts;
 }
 
-std::string	Phonebook::getContactFirstName( int i ) {
+int	Phonebook::getCurrContact( void ) const {
+	return currContact;
+}
+
+std::string	Phonebook::getContactFirstName( int i ) const {
 	return truncString(contacts[i].getFirstName());
 }
 
-std::string	Phonebook::getContactLastName( int i ) {
+std::string	Phonebook::getContactLastName( int i ) const {
 	return truncString(contacts[i].getLastName());
 }
 
-std::string	Phonebook::getContactNickname( int i ) {
+std::string	Phonebook::getContactNickname( int i ) const {
 	return truncString(contacts[i].getNickname());
 }
 
-std::string	Phonebook::getContactPhoneNumber( int i ) {
+std::string	Phonebook::getContactPhoneNumber( int i ) const {
 	return truncString(contacts[i].getPhoneNumber());
 }
 
-std::string	Phonebook::getContactSecret( int i ) {
+std::string	Phonebook::getContactSecret( int i ) const {
 	return truncString(contacts[i].getSecret());
 }
 
@@ -76,7 +90,7 @@ std::string	Phonebook::getContactSecret( int i ) {
  * Return:
  *     A modified version if the input string, either truncated or unchanged.
  */
-std::string Phonebook::truncString( const std::string &str ) {
+std::string Phonebook::truncString( const std::string &str ) const {
 	if (str.length() > 10) {
 		return str.substr(0, 9) + ".";
 	}
@@ -109,7 +123,7 @@ void	Phonebook::addContact( const std::string &fName, const std::string &lName, 
 /*
  * Shows the information of all contacts.
  */
-void	Phonebook::showContacts( void ) {
+void	Phonebook::showContacts( void ) const {
 	std::cout << " ___________________________________________ " << std::endl;
 	std::cout << "|          |          |          |          |" << std::endl;
 	std::cout << "|   Index  |First Name| Last Name| Nickname |" << std::endl;
@@ -128,6 +142,6 @@ void	Phonebook::showContacts( void ) {
 /*
  * Show the information of one contact.
  */
-void	Phonebook::showOneContact( int i ) {
+void	Phonebook::showOneContact( int i ) const {
 	contacts[i].showContact();
 }

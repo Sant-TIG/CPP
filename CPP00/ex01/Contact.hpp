@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 14:50:37 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/30 14:50:59 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONTACT_H
 
 # define CONTACT_H
 
 # include <string>
+# include <iostream>
 
 class Contact {
 	private:
@@ -22,12 +35,12 @@ class Contact {
 		Contact ( const Contact &oneContact );
 		Contact & operator=(const Contact &oneContact);
 		~Contact( void );
-		std::string	getFirstName( void );
-		std::string	getLastName( void );
-		std::string	getNickname( void );
-		std::string getPhoneNumber( void );
-		std::string	getSecret( void );
-		void		showContact( void );
+		std::string	getFirstName( void ) const;
+		std::string	getLastName( void ) const;
+		std::string	getNickname( void ) const;
+		std::string getPhoneNumber( void ) const;
+		std::string	getSecret( void ) const;
+		void		showContact( void ) const;
 };
 
 #endif

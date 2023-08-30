@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 15:55:15 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/30 15:55:17 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Account.hpp"
 #include <iostream>
 #include <ctime>
@@ -8,7 +20,7 @@ int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
 /*
- * Parameterized constructor. Initializes the instance variables.
+ * Parameterized constructor. Initializes the instance variables with the values passed as a parameters.
  */
 Account::Account( int initial_deposit ) : _accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0) {
 	_nbAccounts++;
