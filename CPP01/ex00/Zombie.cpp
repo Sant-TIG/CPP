@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/30 16:32:52 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/30 16:32:53 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Zombie.hpp"
 
 /*
@@ -33,7 +45,7 @@ Zombie & Zombie::operator=( const Zombie &oneZombie ) {
 }
 
 /*
- * Destructor.
+ * Destructor
  */
 Zombie::~Zombie( void ) {
 	std::cout << "Zombie destructor called" << std::endl;
