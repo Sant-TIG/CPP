@@ -21,7 +21,7 @@ std::string	transformCase( const std::string &str, const std::string &type);
 void		addNewContact( Phonebook &onePhonebook );
 std::string	getInputString( const std::string &query );
 void		searchContact( Phonebook &onePhonebook );
-int			getInputInt( const std::string &query );
+int		getInputInt( const std::string &query );
 
 /*
  * Main function of the program. Create a new Phonebook object, then display the
