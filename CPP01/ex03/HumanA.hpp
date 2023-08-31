@@ -3,6 +3,7 @@
 # define HUMANA_H
 
 # include "Weapon.hpp"
+# include "Colors.hpp"
 # include <string>
 # include <iostream>
 

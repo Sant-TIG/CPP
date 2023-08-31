@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sperez-p <sperez-p@student.42urduli>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/31 14:30:00 by sperez-p          #+#    #+#             */
+/*   Updated: 2023/08/31 14:44:11 by sperez-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Harl.hpp"
 #include <iostream>
 
@@ -25,7 +37,9 @@ Harl::Harl( const Harl &oneHarl ) {
  * Overloading of the assignment operator.
  */
 Harl & Harl::operator=( const Harl &oneHarl ) {
-	*this = oneHarl;
+	if (this != &oneHarl) {
+		
+	}
 	return *this;
 }
 

@@ -12,7 +12,7 @@ OBJS = newZombie.o\
 
 CC = c++
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
 RM = rm -rf
 
