@@ -6,6 +6,8 @@ def	generate_zombie_hpp(class_name):
 
 # include "Colors.hpp"
 
+# include <iostream>
+
 class {class_name} {{
 	private:
 
@@ -24,32 +26,51 @@ class {class_name} {{
 def generate_zombie_cpp(class_name):
 	cpp_content = f'''
 #include "{class_name}.hpp"
-#include <iostream>
 
-/*
- * Default constructor. Initializes instance variables to 0.
+
+/* ------------ CONSTRUCTORS AND DESTRUCTOR ------------ */
+
+/**
+ * @brief Construct a new {class_name} object with default values.
  */
 {class_name}::{class_name}( void ) {{
 	std::cout << GREEN << "{class_name} default constructor called" << RESET << std::endl;
 }}
 
-/*
- * Parameterized constructor. Initializes the instance variables with the values passed as parameters.
+/**
+ * @brief Construct a new {class_name} object with the values passed as parameters.
+ *
+ * @param 
  */
 {class_name}::{class_name}(  ) {{
 	std::cout << GREEN << "{class_name} parameterized constructor called" << RESET << std::endl;
 }}
 
-/*
- * Copy constructor. Initializes instance variables with the values of another object.
+/**
+ * @brief Construct a new {class_name} object by copying the values from another object.
+ *
+ * @param one{class_name} A reference to the {class_name} object to be copied.
  */
 {class_name}::{class_name}( const {class_name} &one{class_name} ) {{
 	*this = one{class_name};
 	std::cout << GREEN << "{class_name} copy constructor called" << RESET << std::endl;
 }}
 
-/*
- * Overloading of the assignment operator.
+/**
+ * @brief Destroy the {class_name} object.
+ */
+{class_name}::~{class_name}( void ) {{
+	std::cout << RED << "{class_name} destructor called" << RESET << std::endl;
+}}
+
+
+/* ------------ OVERLOAD METHODS ------------ */
+
+/**
+ * @brief Overloads the assignment operator for the {class_name} class.
+ *
+ * @param one{class_name} The source {class_name} object to assign from.
+ * @return {class_name}& A reference to the current {class_name} object after assignment.
  */
 {class_name} & {class_name}::operator=( const {class_name} &one{class_name} ) {{
 	if (this != &one{class_name}) {{
@@ -58,21 +79,12 @@ def generate_zombie_cpp(class_name):
 	return *this;
 }}
 
-/*
- * Destructor.
- */
-{class_name}::~{class_name}( void ) {{
-	std::cout << RED << "{class_name} destructor called" << RESET << std::endl;
-}}
 
-/*
- * GETTER METHODS
- */
+/* ------------ GETTER METHODS ------------ */
 
 
-/*
- * SETTER METHODS
- */
+/* ------------ SETTER METHODS ------------ */
+
 
 '''
 
