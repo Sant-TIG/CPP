@@ -1,8 +1,8 @@
 def	generate_zombie_hpp(class_name):
 	hpp_content = f'''
-#ifndef {class_name.upper()}_H
+#ifndef {class_name.upper()}_HPP
 
-# define {class_name.upper()}_H
+# define {class_name.upper()}_HPP
 
 # include "Colors.hpp"
 

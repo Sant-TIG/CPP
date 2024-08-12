@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @author sperez-p  (sperez-p@student.42urduliz.com)
- * @brief Implementation of the RPN class for evaluating Reverse Polish Notation expressions.
+ * @brief Entry point of the program for evaluating Reverse Polish Notation (RPN) expressions.
  * @date 2024-07-29
  */
 
