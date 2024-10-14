@@ -201,12 +201,12 @@ void	ScalarConversion::doubleConversion( const double &num ) {
 	} else {
 		std::cout << "int: " << static_cast<int>(num) << std::endl;
 	}
-	if (num == static_cast<int>(num)) {  // Verifica si es un entero exacto
+	if (static_cast<float>(num) == static_cast<int>(num)) {  // Verifica si es un entero exacto
         std::cout << "float: " << static_cast<float>(num) << ".0f" << std::endl;
     } else {
         std::cout << "float: " << static_cast<float>(num) << "f" << std::endl;
     }
-    if (static_cast<double>(num) == static_cast<int>(num)) {
+    if (num == static_cast<int>(num)) {
         std::cout << "double: " << num << ".0" << std::endl;
     } else {
         std::cout << "double: " << num << std::endl;
