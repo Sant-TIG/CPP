@@ -1,0 +1,6 @@
+
+
+
+
+ex02
+https://en.cppreference.com/w/cpp/language/dynamic_cast
